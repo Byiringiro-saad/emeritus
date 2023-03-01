@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 //images
 import Hero from "../assets/Hero.png";
+import Sticky from "../components/sticky";
 
 const Main = () => {
   return (
@@ -46,6 +47,12 @@ const Main = () => {
             </div>
           </form>
         </div>
+      </div>
+      <div className="some">
+        <p>Early bird discounts available. Book your seat now!</p>
+      </div>
+      <div className="sticky">
+        <Sticky />
       </div>
     </Container>
   );
@@ -140,6 +147,25 @@ const Container = styled.div`
         }
       }
     }
+  }
+
+  .some {
+    width: 100%;
+    height: 50px;
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 1.1em;
+      color: var(--white);
+    }
+  }
+
+  .sticky {
+    width: 100%;
+    height: auto;
   }
 `;
 
