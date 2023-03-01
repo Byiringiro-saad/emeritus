@@ -193,6 +193,8 @@ const Container = styled.div`
   .sticky {
     width: 100%;
     height: auto;
+    position: sticky;
+    top: 0;
   }
 
   .sections {

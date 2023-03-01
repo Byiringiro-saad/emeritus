@@ -9,6 +9,10 @@ const Nav = () => {
     <Container>
       <div className="container">
         <img src={logo} alt="logo" />
+        <p>
+          <span>CAI</span>
+          <span>Charity school of AI</span>
+        </p>
       </div>
     </Container>
   );
@@ -40,6 +44,19 @@ const Container = styled.div`
 
     img {
       width: 80px;
+    }
+
+    p {
+      margin: 0 0 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span:nth-child(1) {
+        font-size: 2.1em;
+        font-weight: 700;
+        color: var(--red);
+      }
     }
   }
 `;
