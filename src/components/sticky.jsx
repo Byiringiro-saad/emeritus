@@ -88,6 +88,7 @@ const Container = styled.div`
 
       p {
         color: var(--white);
+        font-size: 1.2em;
       }
 
       p.title {

@@ -3,13 +3,24 @@ import styled from "styled-components";
 
 //images
 import Hero from "../assets/Hero.png";
+
+//components
 import Sticky from "../components/sticky";
+import One from "../components/sections/one";
+import Two from "../components/sections/two";
+import Four from "../components/sections/four";
+import Three from "../components/sections/three";
+import Five from "../components/sections/five";
+import Six from "../components/sections/six";
+import Seven from "../components/sections/seven";
+import Eight from "../components/sections/eight";
+import Footer from "../components/footer";
 
 const Main = () => {
   return (
     <Container hero={Hero}>
       <div className="hero">
-        <div className="content one">
+        <div className="one">
           <div className="header">
             <p>
               Hands-on Artificial intelligence program for <br /> students and
@@ -54,6 +65,25 @@ const Main = () => {
       <div className="sticky">
         <Sticky />
       </div>
+      <div className="sections">
+        <One />
+        <div className="gray">
+          <Two />
+        </div>
+        <Three />
+        <div className="gray">
+          <Four />
+        </div>
+        <Five />
+        <div className="gray">
+          <Six />
+        </div>
+        <Seven />
+        <div className="gray">
+          <Eight />
+        </div>
+      </div>
+      <Footer />
     </Container>
   );
 };
@@ -65,8 +95,11 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  .content {
+  .one {
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     @media only screen and (min-width: 1200px) {
       width: 1200px;
@@ -75,12 +108,6 @@ const Container = styled.div`
     @media only screen and (max-width: 1200px) {
       width: 90%;
     }
-  }
-
-  .one {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   .hero {
@@ -158,7 +185,7 @@ const Container = styled.div`
     justify-content: center;
 
     p {
-      font-size: 1.1em;
+      font-size: 1.2em;
       color: var(--white);
     }
   }
@@ -166,6 +193,22 @@ const Container = styled.div`
   .sticky {
     width: 100%;
     height: auto;
+  }
+
+  .sections {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .gray {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--gray);
+    }
   }
 `;
 
