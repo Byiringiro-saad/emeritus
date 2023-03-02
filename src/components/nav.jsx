@@ -11,7 +11,7 @@ const Nav = () => {
         <img src={logo} alt="logo" />
         <p>
           <span>CAI</span>
-          <span>Charity school of AI</span>
+          <span>Clarity school of AI</span>
         </p>
       </div>
     </Container>
