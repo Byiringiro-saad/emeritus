@@ -28,6 +28,7 @@ const Seven = () => {
               </div>
             </div>
           </div>
+          <p className="name">Vaibhav Goyal</p>
           <div className="down">
             <p>
               An technology leader with 19+ years of experience in building deep
@@ -51,6 +52,7 @@ const Seven = () => {
               </div>
             </div>
           </div>
+          <p className="name">Anup Sawant</p>
           <div className="down">
             <p>
               16yrs+ of experience in architecting and developing intelligent
@@ -136,6 +138,12 @@ const Container = styled.div`
             }
           }
         }
+      }
+
+      p.name {
+        font-size: 1.3em;
+        font-weight: 700;
+        margin: 20px 0 10px 0;
       }
 
       .down {

@@ -100,15 +100,16 @@ const Container = styled.div`
       height: 100%;
       border-collapse: collapse;
       border-radius: 5px;
-      background: #fafafa;
 
       thead {
+        background: var(--red);
+
         tr {
           td {
             padding: 20px;
             font-weight: 700;
             font-size: 1.2em;
-            color: var(--black);
+            color: var(--white);
             text-align: center;
           }
         }

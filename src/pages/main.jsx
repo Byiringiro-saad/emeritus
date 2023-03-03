@@ -54,6 +54,13 @@ const Main = () => {
               <input type="text" placeholder="City" />
             </div>
             <div className="row">
+              <p>
+                By clicking the button below, you agree to receive
+                communications about this programme and relevant programmes.
+                Privacy Policy
+              </p>
+            </div>
+            <div className="row">
               <button>Download brochure</button>
             </div>
           </form>
@@ -67,17 +74,11 @@ const Main = () => {
       </div>
       <div className="sections">
         <One />
-        <div className="gray">
-          <Two />
-        </div>
         <Three />
         <div className="gray">
           <Four />
         </div>
-        <Five />
-        <div className="gray">
-          <Six />
-        </div>
+        <Six />
         <Seven />
         <div className="gray">
           <Eight />
@@ -112,12 +113,14 @@ const Container = styled.div`
 
   .hero {
     width: 100%;
-    height: 500px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px 0;
     background: url(${Hero});
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .header {
       width: auto;
@@ -142,7 +145,7 @@ const Container = styled.div`
       background: var(--white);
 
       .row {
-        width: 400px;
+        width: 450px;
         height: auto;
         margin: 0 0 15px 0;
         display: flex;

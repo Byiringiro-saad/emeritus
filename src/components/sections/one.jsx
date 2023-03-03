@@ -4,36 +4,44 @@ import styled from "styled-components";
 const One = () => {
   return (
     <Container>
-      <p className="title">Why Learn Artificial Intelligence?</p>
+      <p className="title">Program Charter</p>
+      <p className="para">
+        Develop AI technical skillsets amongst young population to help them
+        with employment opportunities and upgrade their current set of skills
+      </p>
       <div className="content">
-        <div className="box">
-          <p className="title">40.2%</p>
-          <p>
-            The global AI market is predicted to expand at a CAGR of 40.2% from
-            2021 to 2028.
-          </p>
-          <p className="grayish">(Grandview Research)</p>
+        <div className="column">
+          <div className="box">
+            <div className="bullet"></div>
+            <p>
+              Learn how to implement artificial intelligence techniques and
+              devise cutting-edge solutions to real-life problems within your
+              organisation
+            </p>
+          </div>
+          <div className="box">
+            <div className="bullet"></div>
+            <p>
+              Develop a comprehensive understanding of AI concepts and identify
+              the best models to fit various business situations
+            </p>
+          </div>
         </div>
-        <div className="border"></div>
-        <div className="box">
-          <p className="title">98%</p>
-          <p>
-            Almost 98% of analytics jobs advertised in India are full-time,
-            signifying the strengthening of the Indian analytics hiring market
-          </p>
-          <p className="grayish">(Analytics India Magazine, 2020)</p>
-        </div>
-        <div className="border"></div>
-        <div className="box">
-          <p className="title">₹25 to ₹65 lakh</p>
-          <p>
-            Data science professionals with 3-10 years of experience get annual
-            salaries in the range of ₹25 lakh to ₹65 lakh. More experienced
-            people can command annual salaries upwards of ₹1 crore.
-          </p>
-          <p className="grayish">
-            (Talent Trends Report 2021 by Michael Page India, 2021)
-          </p>
+        <div className="column">
+          <div className="box">
+            <div className="bullet"></div>
+            <p>
+              Interact and collaborate with industry experts to understand the
+              technical and business applications of AI
+            </p>
+          </div>
+          <div className="box">
+            <div className="bullet"></div>
+            <p>
+              Gain hands-on learning in identifying, defining, designing,
+              implementing and monitoring AI projects
+            </p>
+          </div>
         </div>
       </div>
     </Container>
@@ -45,8 +53,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  margin: 30px 0;
+  margin: 30px 0 50px 0;
 
   @media only screen and (min-width: 1200px) {
     width: 1200px;
@@ -56,8 +63,11 @@ const Container = styled.div`
     width: 90%;
   }
 
-  p {
+  p.para {
+    width: 65%;
+    text-align: center;
     font-size: 1.2em;
+    margin: 20px 0 30px 0;
   }
 
   p.title {
@@ -67,40 +77,47 @@ const Container = styled.div`
   }
 
   .content {
-    width: 100%;
+    width: 85%;
     height: 70%;
+    margin: 30px 0 0 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 
-    .border {
-      width: 1px;
-      height: 100%;
-      margin: 0 25px;
-      background: var(--grayish);
-    }
-
-    .box {
-      width: 350px;
+    .column {
+      width: 40%;
       height: 100%;
       display: flex;
+      margin: 20px 40px 0 0;
       flex-direction: column;
-      align-items: center;
 
-      p.title {
-        line-height: 50px;
-      }
+      .box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 0 0 40px 0;
 
-      p {
-        text-align: center;
-      }
+        .bullet {
+          width: 10px;
+          height: 10px;
+          padding: 5px 5px;
+          margin: 0 10px 0 0;
+          border-radius: 50%;
+          background: var(--red);
+        }
 
-      p.grayish {
-        margin: 10px 0 0 0;
-        text-transform: uppercase;
-        color: var(--grayish);
+        p {
+          margin: -5px 0 0 0;
+        }
       }
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 0 0 20px 0;
     }
   }
 `;

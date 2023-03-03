@@ -5,29 +5,7 @@ const Five = () => {
   return (
     <Container>
       <p className="title">Learning Outcomes</p>
-      <div className="content">
-        <div className="column">
-          <p>
-            Learn how to implement artificial intelligence techniques and devise
-            cutting-edge solutions to real-life problems within your
-            organisation
-          </p>
-          <p>
-            Develop a comprehensive understanding of AI concepts and identify
-            the best models to fit various business situations
-          </p>
-        </div>
-        <div className="column">
-          <p>
-            Interact and collaborate with industry experts to understand the
-            technical and business applications of AI
-          </p>
-          <p>
-            Gain hands-on learning in identifying, defining, designing,
-            implementing and monitoring AI projects
-          </p>
-        </div>
-      </div>
+      <div className="content"></div>
     </Container>
   );
 };
