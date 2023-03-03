@@ -6,8 +6,9 @@ const One = () => {
     <Container>
       <p className="title">Program Charter</p>
       <p className="para">
-        Develop AI technical skillsets amongst young population to help them
-        with employment opportunities and upgrade their current set of skills
+        Develop AI technical skillsets amongst young and working population to
+        help them with employment opportunities & enhance their current set of
+        skills
       </p>
       <div className="content">
         <div className="column">
