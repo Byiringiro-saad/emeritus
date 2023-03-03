@@ -10,6 +10,7 @@ const One = () => {
         help them with employment opportunities & enhance their current set of
         skills
       </p>
+      <p className="title">Program Outcomes</p>
       <div className="content">
         <div className="column">
           <div className="box">
@@ -50,11 +51,12 @@ const One = () => {
 };
 
 const Container = styled.div`
-  height: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px 0 50px 0;
+  justify-content: space-around;
+  margin: 60px 0 50px 0;
 
   @media only screen and (min-width: 1200px) {
     width: 1200px;
@@ -74,6 +76,7 @@ const Container = styled.div`
   p.title {
     font-size: 2em;
     font-weight: 700;
+    line-height: 70px;
     color: var(--red);
   }
 
