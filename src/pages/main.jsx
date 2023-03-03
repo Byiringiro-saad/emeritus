@@ -164,7 +164,7 @@ const Container = styled.div`
         }
 
         button {
-          background: var(--black);
+          background: var(--red);
           color: var(--white);
           text-transform: uppercase;
         }

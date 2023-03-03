@@ -10,7 +10,7 @@ const One = () => {
         help them with employment opportunities & enhance their current set of
         skills
       </p>
-      <p className="title">Program Outcomes</p>
+      <p className="title">Learning Outcomes</p>
       <div className="content">
         <div className="column">
           <div className="box">
