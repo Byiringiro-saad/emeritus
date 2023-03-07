@@ -92,6 +92,15 @@ const Container = styled.div`
       flex-direction: column;
     }
 
+    @media only screen and (max-width: 480px) {
+      width: 90%;
+      padding: 0;
+      margin: 0;
+      margin: 0 0 40px 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .icon {
       margin: 0 10px 0 0;
     }
@@ -103,6 +112,10 @@ const Container = styled.div`
       p {
         color: var(--white);
         font-size: 1.2em;
+
+        @media only screen and (max-width: 480px) {
+          text-align: center;
+        }
       }
 
       p.title {

@@ -133,6 +133,10 @@ const Container = styled.div`
       height: 750px;
     }
 
+    @media only screen and (max-width: 480px) {
+      height: 800px;
+    }
+
     .header {
       width: auto;
       height: 110px;
@@ -145,12 +149,17 @@ const Container = styled.div`
         width: auto;
         height: auto;
         align-self: center;
+        text-align: center;
       }
 
       p {
         font-size: 2em;
         font-weight: 700;
         color: var(--white);
+
+        @media only screen and (max-width: 480px) {
+          text-align: center;
+        }
       }
     }
 
@@ -176,6 +185,10 @@ const Container = styled.div`
 
         @media only screen and (max-width: 768px) {
           width: 450px;
+        }
+
+        @media only screen and (max-width: 480px) {
+          width: 350px;
         }
 
         input,

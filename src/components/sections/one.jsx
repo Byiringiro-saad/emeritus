@@ -71,6 +71,10 @@ const Container = styled.div`
     height: 600px;
   }
 
+  @media only screen and (max-width: 480px) {
+    height: 570px;
+  }
+
   p.para {
     width: 65%;
     text-align: center;
@@ -79,6 +83,10 @@ const Container = styled.div`
 
     @media only screen and (max-width: 1024px) {
       width: 90%;
+    }
+
+    @media only screen and (max-width: 480px) {
+      width: 95%;
     }
   }
 
@@ -102,6 +110,11 @@ const Container = styled.div`
       width: 95%;
     }
 
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
     .column {
       width: 40%;
       height: 100%;
@@ -111,6 +124,12 @@ const Container = styled.div`
 
       @media only screen and (max-width: 1024px) {
         width: 50%;
+      }
+
+      @media only screen and (max-width: 480px) {
+        width: 95%;
+        margin: 0;
+        height: auto;
       }
 
       .box {

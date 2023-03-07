@@ -56,6 +56,12 @@ const Container = styled.div`
     justify-content: center;
   }
 
+  @media only screen and (max-width: 480px) {
+    height: 830px;
+    justify-content: flex-start;
+    padding: 20px 0 0 0;
+  }
+
   p.para {
     width: 65%;
     text-align: center;
@@ -87,6 +93,11 @@ const Container = styled.div`
       width: 95%;
     }
 
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
     .column {
       width: 40%;
       height: 100%;
@@ -95,6 +106,11 @@ const Container = styled.div`
 
       @media only screen and (max-width: 768px) {
         width: 45%;
+      }
+
+      @media only screen and (max-width: 480px) {
+        width: 95%;
+        margin: 0 0 20px 0;
       }
 
       .image img {

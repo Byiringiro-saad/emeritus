@@ -61,6 +61,10 @@ const Container = styled.div`
     height: 400px;
   }
 
+  @media only screen and (max-width: 480px) {
+    height: 500px;
+  }
+
   p.title {
     font-size: 2em;
     font-weight: 700;
