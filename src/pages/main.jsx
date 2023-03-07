@@ -141,6 +141,7 @@ const Container = styled.div`
       width: auto;
       height: 110px;
       padding: 20px;
+      margin: 0 15px 0 0;
       border-radius: 5px;
       align-self: flex-end;
       background: #00000076;
@@ -150,6 +151,7 @@ const Container = styled.div`
         height: auto;
         align-self: center;
         text-align: center;
+        margin: 0;
       }
 
       p {

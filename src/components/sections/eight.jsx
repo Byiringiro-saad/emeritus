@@ -16,7 +16,7 @@ const Eight = () => {
 };
 
 const Container = styled.div`
-  height: 500px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,10 +36,11 @@ const Container = styled.div`
     font-size: 2em;
     font-weight: 700;
     color: var(--red);
+    line-height: 50px;
   }
 
   .content {
-    width: 100%;
+    width: 80%;
     height: 70%;
     display: flex;
     flex-direction: row;
