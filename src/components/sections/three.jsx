@@ -47,8 +47,9 @@ const Container = styled.div`
     width: 1200px;
   }
 
-  @media only screen and (max-width: 1200px) {
-    width: 90%;
+  @media only screen and (max-width: 1024px) {
+    width: 95%;
+    margin: 0;
   }
 
   p.para {
@@ -56,6 +57,11 @@ const Container = styled.div`
     text-align: center;
     font-size: 1.2em;
     margin: 20px 0 30px 0;
+
+    @media only screen and (max-width: 1024px) {
+      width: 95%;
+      margin: 0;
+    }
   }
 
   p.title {
@@ -73,11 +79,21 @@ const Container = styled.div`
     align-items: center;
     justify-content: space-around;
 
+    @media only screen and (max-width: 1024px) {
+      width: 95%;
+    }
+
     .column {
       width: 40%;
       height: 100%;
       display: flex;
       flex-direction: column;
+
+      .image img {
+        @media only screen and (max-width: 1024px) {
+          width: 100%;
+        }
+      }
 
       p.header {
         font-size: 1.4em;

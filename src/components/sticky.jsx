@@ -68,6 +68,12 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   background: var(--red);
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: 1024px) {
+    height: auto;
+    padding: 30px 0;
+  }
 
   .box {
     width: 20%;
@@ -77,6 +83,14 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+
+    @media only screen and (max-width: 1024px) {
+      width: 45%;
+      padding: 0;
+      margin: 0;
+      margin: 0 0 20px 0;
+      flex-direction: column;
+    }
 
     .icon {
       margin: 0 10px 0 0;

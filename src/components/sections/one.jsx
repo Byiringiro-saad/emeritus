@@ -62,8 +62,9 @@ const Container = styled.div`
     width: 1200px;
   }
 
-  @media only screen and (max-width: 1200px) {
-    width: 90%;
+  @media only screen and (max-width: 1024px) {
+    height: 500px;
+    width: 95%;
   }
 
   p.para {
@@ -71,6 +72,10 @@ const Container = styled.div`
     text-align: center;
     font-size: 1.2em;
     margin: 20px 0 30px 0;
+
+    @media only screen and (max-width: 1024px) {
+      width: 90%;
+    }
   }
 
   p.title {
@@ -89,12 +94,20 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: 1024px) {
+      width: 95%;
+    }
+
     .column {
       width: 40%;
       height: 100%;
       display: flex;
       margin: 20px 40px 0 0;
       flex-direction: column;
+
+      @media only screen and (max-width: 1024px) {
+        width: 50%;
+      }
 
       .box {
         width: 100%;

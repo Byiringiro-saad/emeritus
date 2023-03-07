@@ -7,10 +7,8 @@ import Hero from "../assets/Hero.png";
 //components
 import Sticky from "../components/sticky";
 import One from "../components/sections/one";
-import Two from "../components/sections/two";
 import Four from "../components/sections/four";
 import Three from "../components/sections/three";
-import Five from "../components/sections/five";
 import Six from "../components/sections/six";
 import Seven from "../components/sections/seven";
 import Eight from "../components/sections/eight";
@@ -106,8 +104,11 @@ const Container = styled.div`
       width: 1200px;
     }
 
-    @media only screen and (max-width: 1200px) {
-      width: 90%;
+    @media only screen and (max-width: 1024px) {
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
     }
   }
 
@@ -122,6 +123,11 @@ const Container = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
 
+    @media only screen and (max-width: 1024px) {
+      width: 100%;
+      height: 700px;
+    }
+
     .header {
       width: auto;
       height: 110px;
@@ -129,6 +135,12 @@ const Container = styled.div`
       border-radius: 5px;
       align-self: flex-end;
       background: #00000076;
+
+      @media only screen and (max-width: 1024px) {
+        width: auto;
+        height: auto;
+        align-self: center;
+      }
 
       p {
         font-size: 2em;
@@ -152,6 +164,10 @@ const Container = styled.div`
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
+        @media only screen and (max-width: 1024px) {
+          width: 550px;
+        }
 
         input,
         select,
@@ -198,6 +214,10 @@ const Container = styled.div`
     height: auto;
     position: sticky;
     top: 0;
+
+    @media only screen and (max-width: 1024px) {
+      position: relative;
+    }
   }
 
   .sections {

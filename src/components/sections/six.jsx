@@ -77,8 +77,10 @@ const Container = styled.div`
     width: 1200px;
   }
 
-  @media only screen and (max-width: 1200px) {
-    width: 90%;
+  @media only screen and (max-width: 1024px) {
+    height: 550px;
+    width: 95%;
+    margin: 0;
   }
 
   p.title {
@@ -95,11 +97,21 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: 1024px) {
+      height: 75%;
+      display: block;
+      overflow: scroll;
+    }
+
     table {
       width: 100%;
       height: 100%;
       border-collapse: collapse;
       border-radius: 5px;
+
+      @media only screen and (max-width: 1024px) {
+        width: auto;
+      }
 
       thead {
         background: var(--red);
@@ -111,6 +123,10 @@ const Container = styled.div`
             font-size: 1.2em;
             color: var(--white);
             text-align: center;
+
+            @media only screen and (max-width: 1024px) {
+              white-space: nowrap;
+            }
           }
         }
       }
@@ -122,6 +138,10 @@ const Container = styled.div`
             color: var(--grayish);
             text-align: center;
             font-size: 1.2em;
+
+            @media only screen and (max-width: 1024px) {
+              white-space: nowrap;
+            }
           }
         }
       }

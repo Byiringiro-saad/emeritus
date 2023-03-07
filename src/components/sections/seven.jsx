@@ -80,8 +80,9 @@ const Container = styled.div`
     width: 1200px;
   }
 
-  @media only screen and (max-width: 1200px) {
-    width: 90%;
+  @media only screen and (max-width: 1024px) {
+    height: 650px;
+    width: 95%;
   }
 
   p.title {
@@ -98,6 +99,10 @@ const Container = styled.div`
     align-items: center;
     flex-flow: row-reverse;
 
+    @media only screen and (max-width: 1024px) {
+      align-items: flex-start;
+    }
+
     .column {
       width: auto;
       height: auto;
@@ -112,8 +117,17 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
 
+        @media only screen and (max-width: 1024px) {
+          flex-direction: column;
+        }
+
         img.profile {
           margin: 0 10px 0 0;
+
+          @media only screen and (max-width: 1024px) {
+            width: 120px;
+            margin: 0 0 20px 0;
+          }
         }
 
         .universities {
@@ -121,12 +135,20 @@ const Container = styled.div`
           display: flex;
           flex-direction: column;
 
+          @media only screen and (max-width: 1024px) {
+            width: 100%;
+          }
+
           .small {
             width: 100%;
             height: 50%;
             display: flex;
             flex-direction: row;
             align-items: center;
+
+            @media only screen and (max-width: 1024px) {
+              margin: 0 0 15px 0;
+            }
 
             p {
               font-size: 1.2em;
