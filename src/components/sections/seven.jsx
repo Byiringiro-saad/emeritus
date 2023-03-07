@@ -85,6 +85,11 @@ const Container = styled.div`
     width: 95%;
   }
 
+  @media only screen and (max-width: 768px) {
+    height: 800px;
+    justify-content: flex-start;
+  }
+
   p.title {
     font-size: 2em;
     font-weight: 700;
@@ -103,6 +108,11 @@ const Container = styled.div`
       align-items: flex-start;
     }
 
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      margin: 30px 0;
+    }
+
     .column {
       width: auto;
       height: auto;
@@ -110,6 +120,10 @@ const Container = styled.div`
       margin: 0 10px;
       border-radius: 5px;
       background: var(--gray);
+
+      @media only screen and (max-width: 768px) {
+        margin: 0 0 20px 0;
+      }
 
       .top {
         width: 100%;
@@ -121,12 +135,22 @@ const Container = styled.div`
           flex-direction: column;
         }
 
+        @media only screen and (max-width: 768px) {
+          flex-direction: row;
+          height: 50%;
+        }
+
         img.profile {
           margin: 0 10px 0 0;
 
           @media only screen and (max-width: 1024px) {
             width: 120px;
             margin: 0 0 20px 0;
+          }
+
+          @media only screen and (max-width: 768px) {
+            width: auto;
+            margin: 0 20px 0 0;
           }
         }
 

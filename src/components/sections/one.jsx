@@ -67,6 +67,10 @@ const Container = styled.div`
     width: 95%;
   }
 
+  @media only screen and (max-width: 768px) {
+    height: 600px;
+  }
+
   p.para {
     width: 65%;
     text-align: center;

@@ -46,6 +46,7 @@ const Container = styled.div`
       font-size: 1.5em;
       font-weight: 700;
       color: var(--white);
+      text-align: center;
     }
 
     .down {
@@ -75,6 +76,10 @@ const Container = styled.div`
         background: var(--white);
         color: var(--red);
         font-size: 1.2em;
+
+        @media only screen and (max-width: 768px) {
+          width: 70%;
+        }
       }
     }
   }

@@ -45,6 +45,10 @@ const Container = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    img {
+      width: 100%;
+    }
   }
 `;
 

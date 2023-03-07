@@ -57,6 +57,10 @@ const Container = styled.div`
     width: 90%;
   }
 
+  @media only screen and (max-width: 768px) {
+    height: 400px;
+  }
+
   p.title {
     font-size: 2em;
     font-weight: 700;
@@ -71,6 +75,11 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: 768px) {
+      height: 90%;
+      flex-wrap: wrap;
+    }
+
     .box {
       width: 280px;
       height: 100%;
@@ -78,6 +87,11 @@ const Container = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      @media only screen and (max-width: 768px) {
+        width: 45%;
+        height: 45%;
+      }
 
       p {
         text-align: center;

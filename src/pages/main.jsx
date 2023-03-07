@@ -21,8 +21,8 @@ const Main = () => {
         <div className="one">
           <div className="header">
             <p>
-              Hands-on Artificial intelligence program for <br /> students and
-              tech professionals
+              Hands-on Artificial intelligence program for students and tech
+              professionals
             </p>
           </div>
           <form action="#">
@@ -128,6 +128,11 @@ const Container = styled.div`
       height: 700px;
     }
 
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      height: 750px;
+    }
+
     .header {
       width: auto;
       height: 110px;
@@ -167,6 +172,10 @@ const Container = styled.div`
 
         @media only screen and (max-width: 1024px) {
           width: 550px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          width: 450px;
         }
 
         input,

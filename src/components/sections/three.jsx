@@ -52,6 +52,10 @@ const Container = styled.div`
     margin: 0;
   }
 
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
+
   p.para {
     width: 65%;
     text-align: center;
@@ -88,6 +92,10 @@ const Container = styled.div`
       height: 100%;
       display: flex;
       flex-direction: column;
+
+      @media only screen and (max-width: 768px) {
+        width: 45%;
+      }
 
       .image img {
         @media only screen and (max-width: 1024px) {
