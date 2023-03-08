@@ -29,7 +29,7 @@ const Nav = () => {
 
 const Container = styled.div`
   width: 100%;
-  height: 130px;
+  height: 110px;
   display: flex;
   flex-direction: row;
   align-items: center;

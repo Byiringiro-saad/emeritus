@@ -141,26 +141,23 @@ const Application = () => {
         <p className="error">
           {errors?.profession?.type === "required" && "Profession is required"}
         </p>
-        {isStudent && (
-          <>
-            <div className="row">
-              <select
-                className={errors?.course ? "error" : ""}
-                {...register("course", {
-                  required: true,
-                })}
-              >
-                <option value="beginner">Beginner level</option>
-                <option value="intermediate">Intermediate level</option>
-                <option value="advanced">Advanced level</option>
-                <option value="application">AI Application Dev</option>
-              </select>
-            </div>
-            <p className="error">
-              {errors?.course?.type === "required" && "Course is required"}
-            </p>
-          </>
-        )}
+        <div className="row">
+          <select
+            className={errors?.course ? "error" : ""}
+            {...register("course", {
+              required: true,
+            })}
+          >
+            <option>Core Machine Learning ( CML )</option>
+            <option>Deep Learning ( DL )</option>
+            <option>Advanced Machine Learning ( AML )</option>
+            <option>Production Machine Learning ( PML )</option>
+            <option>Machine Learning for Professionals ( MLP )</option>
+          </select>
+        </div>
+        <p className="error">
+          {errors?.course?.type === "required" && "Course is required"}
+        </p>
         <div className="row">
           <input
             type="tel"
@@ -282,6 +279,7 @@ const Container = styled.div`
   background: url(${Hero});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
 
   p.title {
     font-size: 2em;
