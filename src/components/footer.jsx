@@ -1,7 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const goToApplication = () => {
+    navigate("/application");
+  };
+
   return (
     <Container>
       <div className="content">
@@ -11,7 +18,7 @@ const Footer = () => {
         <div className="down">
           <p className="down-title">Application Deadline</p>
           <p>Last Date: March 19, 2023</p>
-          <button>Start application now</button>
+          <button onClick={goToApplication}>Start application now</button>
         </div>
       </div>
     </Container>
@@ -76,6 +83,7 @@ const Container = styled.div`
         background: var(--white);
         color: var(--red);
         font-size: 1.2em;
+        cursor: pointer;
 
         @media only screen and (max-width: 768px) {
           width: 70%;

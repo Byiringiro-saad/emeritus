@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //pages
 import Main from "./pages/main";
+import Application from "./pages/application";
 
 //components
 import Nav from "./components/nav";
@@ -13,6 +14,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/application" element={<Application />} />
       </Routes>
     </Router>
   );

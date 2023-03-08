@@ -80,7 +80,7 @@ const Main = () => {
                 <input
                   type="text"
                   placeholder="Last Name"
-                  className={errors?.fname ? "error" : ""}
+                  className={errors?.lname ? "error" : ""}
                   {...register("lname", {
                     required: true,
                     minLength: 3,
@@ -93,7 +93,7 @@ const Main = () => {
               <input
                 type="text"
                 placeholder="Email"
-                className={errors?.fname ? "error" : ""}
+                className={errors?.email ? "error" : ""}
                 {...register("email", {
                   required: true,
                   pattern: /^\S+@\S+$/i,
@@ -102,7 +102,7 @@ const Main = () => {
             </div>
             <div className="row">
               <select
-                className={errors?.fname ? "error" : ""}
+                className={errors?.location ? "error" : ""}
                 {...register("location", {
                   required: true,
                 })}
@@ -114,7 +114,7 @@ const Main = () => {
               <input
                 type="tel"
                 placeholder="Phone No."
-                className={errors?.fname ? "error" : ""}
+                className={errors?.phone ? "error" : ""}
                 {...register("phone", {
                   required: true,
                   minLength: 10,
@@ -126,7 +126,7 @@ const Main = () => {
               <input
                 type="text"
                 placeholder="Work Experience"
-                className={errors?.fname ? "error" : ""}
+                className={errors?.experience ? "error" : ""}
                 {...register("experience", {
                   required: true,
                   minLength: 1,
@@ -138,7 +138,7 @@ const Main = () => {
               <input
                 type="text"
                 placeholder="City"
-                className={errors?.fname ? "error" : ""}
+                className={errors?.city ? "error" : ""}
                 {...register("city", {
                   required: true,
                   minLength: 3,

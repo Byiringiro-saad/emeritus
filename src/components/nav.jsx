@@ -1,14 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router";
 
 //images
 import logo from "../assets/Logo.png";
 
 const Nav = () => {
+  //configs
+  const navigate = useNavigate();
+
+  const goHome = () => {
+    navigate("/");
+  };
+
   return (
     <Container>
       <div className="container">
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" onClick={goHome} />
       </div>
     </Container>
   );
@@ -40,6 +48,7 @@ const Container = styled.div`
 
     img {
       width: 150px;
+      cursor: pointer;
     }
   }
 `;
