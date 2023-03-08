@@ -1,22 +1,59 @@
 import React from "react";
 import styled from "styled-components";
+import { useForm } from "react-hook-form";
+import { addDoc, collection } from "@firebase/firestore";
 
 //images
 import Hero from "../assets/Hero.png";
+import Loader from "../assets/loader.svg";
+
+//features
+import firestore from "../features/firebase";
 
 //components
 import Sticky from "../components/sticky";
+import Footer from "../components/footer";
 import One from "../components/sections/one";
+import Six from "../components/sections/six";
 import Four from "../components/sections/four";
 import Three from "../components/sections/three";
-import Six from "../components/sections/six";
 import Seven from "../components/sections/seven";
 import Eight from "../components/sections/eight";
-import Footer from "../components/footer";
+import Brochure from "../components/modals/brochure";
 
 const Main = () => {
+  //local data
+  const [loading, setLoading] = React.useState(false);
+  const [showEmail, setShowEmail] = React.useState(false);
+
+  //firebase database
+  const ref = collection(firestore, "information_seekers");
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    setLoading(true);
+    addDoc(ref, data)
+      .then(() => {
+        setLoading(false);
+        setShowEmail(true);
+      })
+      .catch((error) => {
+        setLoading(false);
+      });
+  };
+
+  const handleShowEmail = () => {
+    setShowEmail(false);
+  };
+
   return (
     <Container hero={Hero}>
+      {showEmail && <Brochure close={handleShowEmail} />}
       <div className="hero">
         <div className="one">
           <div className="header">
@@ -25,31 +62,89 @@ const Main = () => {
               professionals
             </p>
           </div>
-          <form action="#">
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="row">
               <div className="chunk">
-                <input type="text" placeholder="First Name" />
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  className={errors?.fname ? "error" : ""}
+                  {...register("fname", {
+                    required: true,
+                    minLength: 3,
+                    maxLength: 20,
+                  })}
+                />
               </div>
               <div className="chunk">
-                <input type="text" placeholder="Last Name" />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  className={errors?.fname ? "error" : ""}
+                  {...register("lname", {
+                    required: true,
+                    minLength: 3,
+                    maxLength: 20,
+                  })}
+                />
               </div>
             </div>
             <div className="row">
-              <input type="text" placeholder="Email" />
+              <input
+                type="text"
+                placeholder="Email"
+                className={errors?.fname ? "error" : ""}
+                {...register("email", {
+                  required: true,
+                  pattern: /^\S+@\S+$/i,
+                })}
+              />
             </div>
             <div className="row">
-              <select>
+              <select
+                className={errors?.fname ? "error" : ""}
+                {...register("location", {
+                  required: true,
+                })}
+              >
                 <option value="India">India</option>
               </select>
             </div>
             <div className="row">
-              <input type="tel" placeholder="Phone No." />
+              <input
+                type="tel"
+                placeholder="Phone No."
+                className={errors?.fname ? "error" : ""}
+                {...register("phone", {
+                  required: true,
+                  minLength: 10,
+                  maxLength: 13,
+                })}
+              />
             </div>
             <div className="row">
-              <input type="text" placeholder="Work Experience" />
+              <input
+                type="text"
+                placeholder="Work Experience"
+                className={errors?.fname ? "error" : ""}
+                {...register("experience", {
+                  required: true,
+                  minLength: 1,
+                  maxLength: 2,
+                })}
+              />
             </div>
             <div className="row">
-              <input type="text" placeholder="City" />
+              <input
+                type="text"
+                placeholder="City"
+                className={errors?.fname ? "error" : ""}
+                {...register("city", {
+                  required: true,
+                  minLength: 3,
+                  maxLength: 20,
+                })}
+              />
             </div>
             <div className="row">
               <p>
@@ -59,7 +154,13 @@ const Main = () => {
               </p>
             </div>
             <div className="row">
-              <button>Download brochure</button>
+              <button type="submit">
+                {loading ? (
+                  <img src={Loader} alt="loader" />
+                ) : (
+                  "Download brochure"
+                )}
+              </button>
             </div>
           </form>
         </div>
@@ -207,10 +308,22 @@ const Container = styled.div`
           border: 1px solid var(--black);
         }
 
+        .error {
+          border: none;
+          border: 1px solid red;
+        }
+
         button {
           background: var(--red);
           color: var(--white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
           text-transform: uppercase;
+
+          img {
+            width: 70px;
+          }
         }
 
         .chunk {
