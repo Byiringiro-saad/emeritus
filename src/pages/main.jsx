@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { addDoc, collection } from "@firebase/firestore";
 
 //images
-import Hero from "../assets/Hero.png";
 import Loader from "../assets/loader.svg";
+import Hero from "../assets/background.jpg";
 
 //features
 import firestore from "../features/firebase";
@@ -166,7 +167,8 @@ const Main = () => {
         </div>
       </div>
       <div className="some">
-        <p>Early bird discounts available. Book your seat now!</p>
+        <p>Early bird discounts available. Book your seat now!</p>{" "}
+        <Link to="/application">Apply now</Link>
       </div>
       <div className="sticky">
         <Sticky />
@@ -215,7 +217,7 @@ const Container = styled.div`
 
   .hero {
     width: 100%;
-    height: 600px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,6 +225,7 @@ const Container = styled.div`
     background: url(${Hero});
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 
     @media only screen and (max-width: 1024px) {
       width: 100%;
@@ -347,6 +350,13 @@ const Container = styled.div`
     p {
       font-size: 1.2em;
       color: var(--white);
+    }
+
+    a {
+      font-size: 1.2em;
+      font-weight: 700;
+      color: var(--white);
+      margin: 0 0 0 10px;
     }
   }
 

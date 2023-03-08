@@ -4,9 +4,9 @@ import { useForm } from "react-hook-form";
 import { addDoc, collection } from "@firebase/firestore";
 
 //images
-import Hero from "../assets/Hero.png";
 import Loader from "../assets/loader.svg";
 import Success from "../components/modals/success";
+import Hero from "../assets/../assets/background.jpg";
 
 //features
 import firestore from "../features/firebase";
@@ -60,7 +60,7 @@ const Application = () => {
   return (
     <Container>
       {showSuccess && <Success close={handleSuccess} />}
-      <p className="title">Application form</p>
+      <p className="title">Application Form</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="row">
           <div className="chunk">
@@ -263,7 +263,7 @@ const Application = () => {
         </div>
         <div className="row">
           <button type="submit">
-            {loading ? <img src={Loader} alt="loader" /> : "Download brochure"}
+            {loading ? <img src={Loader} alt="loader" /> : "Apply now"}
           </button>
         </div>
       </form>
@@ -287,6 +287,7 @@ const Container = styled.div`
     font-size: 2em;
     font-weight: 700;
     line-height: 100px;
+    color: var(--white);
   }
 
   form {

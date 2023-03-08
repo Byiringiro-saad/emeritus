@@ -9,53 +9,35 @@ const Six = () => {
         <table border={1}>
           <thead>
             <tr>
-              <td>Course Id</td>
-              <td>Target segment</td>
-              <td>Description</td>
+              <td>Course name</td>
               <td>Duration(Months)</td>
-              <td>Batch size</td>
               <td>Introductory price (Lakhs)</td>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>ST-A</td>
-              <td>Students</td>
-              <td>Beginner level</td>
+              <td>Core Machine Learning ( CML )</td>
               <td>6</td>
-              <td>40</td>
               <td>1</td>
             </tr>
             <tr>
-              <td>ST-B</td>
-              <td>Students</td>
-              <td>Intermediate level</td>
+              <td>Deep Learning ( DL )</td>
               <td>6</td>
-              <td>40</td>
               <td>1.25</td>
             </tr>
             <tr>
-              <td>ST-C</td>
-              <td>Students</td>
-              <td>Advanced level</td>
+              <td>Advanced Machine Learning ( AML )</td>
               <td>6</td>
-              <td>40</td>
               <td>1.5</td>
             </tr>
             <tr>
-              <td>ST-D</td>
-              <td>Students</td>
-              <td>AI Application Dev</td>
+              <td>Production Machine Learning ( PML )</td>
               <td>6</td>
-              <td>40</td>
               <td>1.5</td>
             </tr>
             <tr>
-              <td>PR-A</td>
-              <td>Professionals</td>
-              <td>Application Focused</td>
+              <td>Machine Learning for Professionals ( MLP )</td>
               <td>3</td>
-              <td>20</td>
               <td>1.5</td>
             </tr>
           </tbody>
