@@ -147,7 +147,7 @@ const Main = () => {
                 })}
               />
             </div>
-            <div className="row">
+            <div className="about">
               <p>
                 By clicking the button below, you agree to receive
                 communications about this programme and relevant programmes.
@@ -217,7 +217,7 @@ const Container = styled.div`
 
   .hero {
     width: 100%;
-    height: 700px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -279,6 +279,16 @@ const Container = styled.div`
       align-items: center;
       justify-content: space-around;
       background: var(--white);
+
+      .about {
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          margin: 0 0 10px 0;
+        }
+      }
 
       .row {
         width: 450px;
